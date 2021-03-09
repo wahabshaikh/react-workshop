@@ -8,3 +8,4 @@ Course Notes and Project Code for the **Web Development with React** workshop.
 
 1. [Pure React](01-Pure-React.md)
 2. [Components](02-Components.md)
+3. [JSX](03-JSX.md)
