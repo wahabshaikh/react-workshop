@@ -1,8 +1,7 @@
 const Movie = (props) => {
   return (
     <div>
-      <h1>{props.title}</h1>
-      <small>{props.release_date}</small>
+      <h2>{props.title}</h2>
       <img src={props.poster_path} alt={props.title} />
     </div>
   );
