@@ -12,4 +12,5 @@ Course Notes and Project Code for the **Web Development with React** workshop.
 4. [Create React App](04-Create-React-App.md)
 5. [State](05-State.md)
 6. [Fetch Data](06-Fetch-Data.md)
-7. [React-Router](07-React-Router.md)
+7. [React Router](07-React-Router.md)
+8. [Forms](08-Forms.md)
