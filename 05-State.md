@@ -1,16 +1,16 @@
 ---
-title: Hooks
+title: State
 ---
 
-# Hooks
+# State
 
 ```jsx
 const Search = () => {
-  const movie = "The Dark Knight";
+  const query = "The Dark Knight";
 
   return (
     <form>
-      <input type="text" placeholder="Search" value={movie} />
+      <input type="text" placeholder="Search" value={query} />
       <button type="submit">🔍</button>
     </form>
   );
@@ -19,21 +19,21 @@ const Search = () => {
 export default Search;
 ```
 
-## useState
+## useState Hook
 
 ```jsx
 import { useState } from "react";
 
 const Search = () => {
-  const [movie, setMovie] = useState("");
+  const [query, setQuery] = useState("");
 
   return (
     <form>
       <input
         type="text"
         placeholder="Search"
-        value={movie}
-        onChange={(e) => setMovie(e.target.value)}
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       />
       <button type="submit">🔍</button>
     </form>
