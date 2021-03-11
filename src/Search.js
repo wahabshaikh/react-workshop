@@ -1,10 +1,28 @@
 import { useState } from "react";
+import axios from "./axios";
+import requests from "./requests";
 
 const Search = () => {
   const [query, setQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  async function fetchSearchResults() {
+    try {
+      const response = await axios.get(requests.fetchQuery(query));
+      console.log(response);
+      setSearchResults(response.data.results);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   return (
-    <form>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        fetchSearchResults();
+      }}
+    >
       <input
         type="text"
         placeholder="Search"
