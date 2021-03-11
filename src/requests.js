@@ -1,8 +1,7 @@
-const API_KEY = "69a51535058185ccfcea09c854204232";
-
 const requests = {
-  fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
-  fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
+  fetchTrending: `/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
+  fetchTopRated: `/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
 };
 
+export const posterBaseUrl = "https://image.tmdb.org/t/p/original/";
 export default requests;

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "./axios";
 import Movie from "./Movie";
-
-const baseUrl = "https://image.tmdb.org/t/p/original/";
+import { posterBaseUrl } from "./requests";
 
 const Category = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([]);
@@ -13,7 +12,6 @@ const Category = ({ title, fetchUrl }) => {
       setMovies(response.data.results);
       return response;
     }
-
     fetchData();
   }, [fetchUrl]);
 
@@ -25,7 +23,7 @@ const Category = ({ title, fetchUrl }) => {
           <Movie
             key={movie.id}
             title={movie.title || movie.name}
-            poster_path={`${baseUrl}${movie.poster_path}`}
+            poster_path={`${posterBaseUrl}${movie.poster_path}`}
           />
         ))}
       </div>
