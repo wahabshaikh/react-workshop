@@ -1,8 +1,8 @@
 ---
-title: Fetching Data
+title: Fetch Data
 ---
 
-# Fetching Data
+# Fetch Data
 
 [The Movie Database](https://www.themoviedb.org/)
 [TMDb API](https://developers.themoviedb.org/3)
@@ -10,6 +10,10 @@ title: Fetching Data
 
 ```shell
 npm i axios
+```
+
+```
+REACT_APP_API_KEY=<<TMDb_API_KEY>>
 ```
 
 ```js
@@ -23,23 +27,27 @@ export default instance;
 ```
 
 ```js
-const API_KEY = "69a51535058185ccfcea09c854204232";
-
 const requests = {
-  fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
-  fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
+  fetchTrending: `/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
+  fetchTopRated: `/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
 };
 
+export const posterBaseUrl = "https://image.tmdb.org/t/p/original/";
 export default requests;
 ```
 
 
-## useEffect
+## useEffect Hook
 
 ```jsx
 import Category from "./Category";
-import requests from "./requests";
 import Search from "./Search";
+import requests from "./requests";
+
+const categories = [
+  { title: "Trending", fetchUrl: requests.fetchTrending },
+  { title: "Top Rated", fetchUrl: requests.fetchTopRated },
+];
 
 const App = () => {
   return (
@@ -47,8 +55,13 @@ const App = () => {
       <h1>React Workshop</h1>
       <Search />
 
-      <Category title="Trending" fetchUrl={requests.fetchTrending} />
-      <Category title="Top Rated" fetchUrl={requests.fetchTopRated} />
+      {categories.map((category) => (
+        <Category
+          key={category.title}
+          title={category.title}
+          fetchUrl={category.fetchUrl}
+        />
+      ))}
     </div>
   );
 };
@@ -60,8 +73,7 @@ export default App;
 import { useEffect, useState } from "react";
 import axios from "./axios";
 import Movie from "./Movie";
-
-const baseUrl = "https://image.tmdb.org/t/p/original/";
+import { posterBaseUrl } from "./requests";
 
 const Category = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([]);
@@ -72,7 +84,6 @@ const Category = ({ title, fetchUrl }) => {
       setMovies(response.data.results);
       return response;
     }
-
     fetchData();
   }, [fetchUrl]);
 
@@ -84,7 +95,7 @@ const Category = ({ title, fetchUrl }) => {
           <Movie
             key={movie.id}
             title={movie.title || movie.name}
-            poster_path={`${baseUrl}${movie.poster_path}`}
+            poster_path={`${posterBaseUrl}${movie.poster_path}`}
           />
         ))}
       </div>

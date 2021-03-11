@@ -11,5 +11,5 @@ Course Notes and Project Code for the **Web Development with React** workshop.
 3. [JSX](03-JSX.md)
 4. [Create React App](04-Create-React-App.md)
 5. [State](05-State.md)
-6. [Fetching Data](06-Fetching-Data.md)
+6. [Fetch Data](06-Fetch-Data.md)
 7. [Forms](07-Forms.md)
