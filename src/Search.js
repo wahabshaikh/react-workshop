@@ -1,15 +1,15 @@
 import { useState } from "react";
 
 const Search = () => {
-  const [movie, setMovie] = useState("");
+  const [query, setQuery] = useState("");
 
   return (
     <form>
       <input
         type="text"
         placeholder="Search"
-        value={movie}
-        onChange={(e) => setMovie(e.target.value)}
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       />
       <button type="submit">🔍</button>
     </form>
