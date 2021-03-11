@@ -1,4 +1,6 @@
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import Category from "./Category";
+import Details from "./Details";
 import Search from "./Search";
 import requests from "./requests";
 
@@ -9,18 +11,28 @@ const categories = [
 
 const App = () => {
   return (
-    <div>
-      <h1>React Workshop</h1>
-      <Search />
+    <Router>
+      <h1>
+        <Link to="/">React Workshop</Link>
+      </h1>
 
-      {categories.map((category) => (
-        <Category
-          key={category.title}
-          title={category.title}
-          fetchUrl={category.fetchUrl}
-        />
-      ))}
-    </div>
+      <Switch>
+        <Route path="/movies/:id">
+          <Details />
+        </Route>
+        <Route exact path="/">
+          <Search />
+
+          {categories.map((category) => (
+            <Category
+              key={category.title}
+              title={category.title}
+              fetchUrl={category.fetchUrl}
+            />
+          ))}
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
