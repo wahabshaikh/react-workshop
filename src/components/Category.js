@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import axios from "./axios";
 import Movie from "./Movie";
-import { posterBaseUrl } from "./requests";
+import axios from "../utils/axios";
+import { posterBaseUrl } from "../utils/requests";
 
 const Category = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([]);

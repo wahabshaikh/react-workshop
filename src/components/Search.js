@@ -1,6 +1,6 @@
 import { useState } from "react";
-import axios from "./axios";
-import requests from "./requests";
+import axios from "../utils/axios";
+import requests from "../utils/requests";
 
 const Search = () => {
   const [query, setQuery] = useState("");
