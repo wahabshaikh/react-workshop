@@ -1,30 +1,39 @@
-import Banner from "./Banner";
-import Category from "./Category";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import Details from "./Details";
+import Home from "./Home";
+import Results from "./Results";
 import Search from "./Search";
-import requests from "./requests";
-
-const categories = [
-  { title: "Now Playing", fetchUrl: requests.fetchNowPlaying },
-  { title: "Popular", fetchUrl: requests.fetchPopular },
-  { title: "Top Rated", fetchUrl: requests.fetchTopRated },
-  { title: "Upcoming", fetchUrl: requests.fetchUpcoming },
-];
 
 const App = () => {
   return (
-    <div>
-      <h1>React Workshop</h1>
-      <Search />
+    <Router>
+      <header
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <h1>
+          <Link to="/">React Workshop</Link>
+        </h1>
+        <Search />
+      </header>
 
-      <Banner fetchUrl={requests.fetchTrending} />
-      {categories.map((category) => (
-        <Category
-          key={category.title}
-          title={category.title}
-          fetchUrl={category.fetchUrl}
-        />
-      ))}
-    </div>
+      <Switch>
+        <Route path="/movies/:id">
+          <Details />
+        </Route>
+
+        <Route path="/search">
+          <Results />
+        </Route>
+
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 

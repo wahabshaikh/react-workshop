@@ -22,6 +22,7 @@ const Category = ({ title, fetchUrl }) => {
           {movies.map((movie) => (
             <Movie
               key={movie.id}
+              id={movie.id}
               title={movie.title || movie.name}
               poster_path={movie.poster_path}
             />
