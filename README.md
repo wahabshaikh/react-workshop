@@ -18,4 +18,4 @@ Course Notes and Project Code for the **Web Development with React** workshop.
 10. [React Router](10-React-Router.md)
 11. [Class Components](11-Class-Components.md)
 12. [Final](12-Final.md)
-13. [Further-Resources](13-Further-Resources.md)
+13. [Resources](13-Resources.md)
