@@ -14,3 +14,5 @@ Course Notes and Project Code for the **Web Development with React** workshop.
 6. [Fetch Data](06-Fetch-Data.md)
 7. [Conditional Rendering](07-Conditional-Rendering.md)
 8. [Lists and Keys](08-Lists-and-Keys.md)
+9. [Forms](09-Forms.md)
+10. [React Router](10-React-Router.md)
