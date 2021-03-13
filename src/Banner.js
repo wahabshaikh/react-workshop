@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { displayImage } from "./requests";
 import axios from "./axios";
 
 const Banner = ({ fetchUrl }) => {
