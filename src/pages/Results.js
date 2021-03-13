@@ -1,5 +1,5 @@
 import { useLocation } from "react-router";
-import Movie from "./Movie";
+import Movie from "../components/Movie";
 
 const Results = () => {
   const {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
-import axios from "./axios";
-import requests from "./requests";
+import axios from "../utils/axios";
+import requests from "../utils/requests";
 
 const Search = () => {
   const history = useHistory();

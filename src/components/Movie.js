@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { displayImage } from "./requests";
+import { displayImage } from "../utils/requests";
 
 const Movie = (props) => {
   return (

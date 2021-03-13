@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { displayImage } from "./requests";
-import axios from "./axios";
+import { displayImage } from "../utils/requests";
+import axios from "../utils/axios";
 
 const Banner = ({ fetchUrl }) => {
   const [movies, setMovies] = useState([]);

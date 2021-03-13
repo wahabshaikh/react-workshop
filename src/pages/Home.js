@@ -1,6 +1,6 @@
-import Banner from "./Banner";
-import Category from "./Category";
-import requests from "./requests";
+import Banner from "../components/Banner";
+import Category from "../components/Category";
+import requests from "../utils/requests";
 
 const categories = [
   { title: "Now Playing", fetchUrl: requests.fetchNowPlaying },

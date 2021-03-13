@@ -1,7 +1,7 @@
-import axios from "./axios";
 import { Component } from "react";
 import { withRouter } from "react-router-dom";
-import requests, { displayImage } from "./requests";
+import requests, { displayImage } from "../utils/requests";
+import axios from "../utils/axios";
 
 class Details extends Component {
   constructor() {

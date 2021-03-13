@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import Details from "./Details";
-import Home from "./Home";
-import Results from "./Results";
-import Search from "./Search";
+import Details from "./pages/Details";
+import Home from "./pages/Home";
+import Results from "./pages/Results";
+import Search from "./components/Search";
 
 const App = () => {
   return (
