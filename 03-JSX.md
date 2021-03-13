@@ -5,6 +5,8 @@ title: JSX
 # JSX
 
 ```jsx
+// src/index.js
+
 const Movie = (props) => {
   return (
     <div>
@@ -36,6 +38,8 @@ const App = () => {
 
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
+
+## Babel
 
 [Babel REPL](https://babeljs.io/repl)
 

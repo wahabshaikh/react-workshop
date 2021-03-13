@@ -5,6 +5,8 @@ title: State
 # State
 
 ```jsx
+// src/Search.js
+
 const Search = () => {
   const query = "The Dark Knight";
 
@@ -22,6 +24,8 @@ export default Search;
 ## useState Hook
 
 ```jsx
+// src/Search.js
+
 import { useState } from "react";
 
 const Search = () => {

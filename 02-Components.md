@@ -4,20 +4,29 @@ title: Components
 
 # Components
 
+```html
+<script src="./index.js"></script>
+```
+
+## Component
+
 ```js
+// src/index.js
+
 const Movie = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h2", {}, "The Dark Knight Rises"),
+  return React.createElement("div", null, [
+    React.createElement("h2", null, "The Dark Knight Rises"),
     React.createElement("img", {
       src:
         "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_UX182_CR0,0,182,268_AL__QL50.jpg",
+      alt: "The Dark Knight Rises",
     }),
   ]);
 };
 
 const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, "React Workshop"),
+  return React.createElement("div", null, [
+    React.createElement("h1", null, "React Workshop"),
     React.createElement(Movie),
     React.createElement(Movie),
     React.createElement(Movie),
@@ -27,23 +36,24 @@ const App = () => {
 ReactDOM.render(React.createElement(App), document.getElementById("root"));
 ```
 
-```html
-<script src="./index.js"></script>
-```
+## Props
 
 ```js
+// src/index.js
+
 const Movie = (props) => {
-  return React.createElement("div", {}, [
-    React.createElement("h2", {}, props.title),
+  return React.createElement("div", null, [
+    React.createElement("h2", null, props.title),
     React.createElement("img", {
       src: props.poster_path,
+      alt: props.title,
     }),
   ]);
 };
 
 const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, "React Workshop"),
+  return React.createElement("div", null, [
+    React.createElement("h1", null, "React Workshop"),
     React.createElement(Movie, {
       title: "The Dark Knight Rises",
       poster_path:

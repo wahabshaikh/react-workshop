@@ -30,7 +30,7 @@ title: Pure React
     return React.createElement(
       "div",
       {},
-      React.createElement("h1", {}, "Hello, I'm React!")
+      React.createElement("h1", null, "Hello, I'm React!")
     );
   };
 

@@ -15,7 +15,11 @@ A JavaScript build toolchain typically consists of:
 npx create-react-app .
 ```
 
+## Modules
+
 ```jsx
+// src/index.js
+
 import ReactDOM from "react-dom";
 import App from "./App";
 
@@ -23,6 +27,8 @@ ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ```jsx
+// src/App.js
+
 import Movie from "./Movie";
 
 const App = () => {
@@ -49,6 +55,8 @@ export default App;
 ```
 
 ```jsx
+// src/Movie.js
+
 const Movie = (props) => {
   return (
     <div>
