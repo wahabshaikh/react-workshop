@@ -1,8 +1,13 @@
 # Welcome to the Web Development with React Workshop!
 
-Course Notes and Project Code for the **Web Development with React** workshop.
+You'll find the Course Notes and Project Code for the **Web Development with React** workshop here. Thank you to [IETE - KJSIEIT](http://iete-kjsieit.com/) for making this workshop possible! Please follow their [Instagram page](https://instagram.com/iete_kjsieit) to keep an eye on the upcoming events. 
 
 **Author:** [Wahab Shaikh](https://wahabshaikh.github.io/)
+
+- [GitHub](https://github.com/wahabshaikh)
+- [LinkedIn](https://www.linkedin.com/in/wahabshaikh)
+- [Instagram](https://instagram.com/wahab_sk)
+- [Twitter](https://twitter.com/wahabshaikh_)
 
 ## Table of Contents
 
