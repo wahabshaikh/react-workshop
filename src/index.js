@@ -1,6 +1,6 @@
 const Movie = (props) => {
-  return React.createElement("div", {}, [
-    React.createElement("h2", {}, props.title),
+  return React.createElement("div", null, [
+    React.createElement("h2", null, props.title),
     React.createElement("img", {
       src: props.poster_path,
     }),
@@ -8,8 +8,8 @@ const Movie = (props) => {
 };
 
 const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, "React Workshop"),
+  return React.createElement("div", null, [
+    React.createElement("h1", null, "React Workshop"),
     React.createElement(Movie, {
       title: "The Dark Knight Rises",
       poster_path:
