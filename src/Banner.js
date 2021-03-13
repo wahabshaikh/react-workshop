@@ -32,23 +32,7 @@ const Banner = ({ fetchUrl }) => {
     setRandomMovie(randomMovie);
   }
 
-  return randomMovie ? (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
-      <div style={{ width: "50vw" }}>
-        <h2>{randomMovie.title || randomMovie.name}</h2>
-        <p>{randomMovie.overview}</p>
-      </div>
-      <div style={{ width: "50vw" }}>
-        <img
-          style={{ width: "100%" }}
-          src={displayImage(randomMovie.backdrop_path)}
-          alt={randomMovie.title || randomMovie.name}
-        />
-      </div>
-    </div>
-  ) : (
-    <h2>Loading...</h2>
-  );
+  return <div>Banner</div>;
 };
 
 export default Banner;
