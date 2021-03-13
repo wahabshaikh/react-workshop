@@ -1,10 +1,25 @@
 import { useState } from "react";
+import axios from "./axios";
+import requests from "./requests";
 
 const Search = () => {
   const [query, setQuery] = useState("");
 
+  async function fetchSearchResults() {
+    if (query) {
+      const response = await axios.get(requests.fetchQuery(query));
+      console.log(response);
+      setQuery("");
+    }
+  }
+
   return (
-    <form>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        fetchSearchResults();
+      }}
+    >
       <input
         type="text"
         placeholder="Search"
